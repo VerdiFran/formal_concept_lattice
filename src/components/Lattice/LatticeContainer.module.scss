@@ -1,0 +1,42 @@
+@import '../../colors';
+
+.container {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+
+.btnContainer {
+    display: block;
+    position: absolute;
+    right: 0;
+}
+
+.pdfButton {
+    margin: 10px;
+    background-color: $block-bcg-color;
+    z-index: 10;
+}
+
+.netContainer {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    margin: 10px;
+    z-index: 50;
+}
+
+.tooltip {
+    display: block;
+    width: 170px;
+    height: 24px;
+    position: absolute;
+    margin-top: calc(var(--tooltip-y) - 3%);
+    margin-left: calc(var(--tooltip-x) - 5%);
+    background-color: $block-bcg-color;
+    border-radius: 8px;
+    z-index: 100;
+}

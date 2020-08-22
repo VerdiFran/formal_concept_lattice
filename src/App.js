@@ -1,18 +1,18 @@
 import React from 'react'
 import './App.css'
-import GraphContainer from './components/Graph/GraphContainer'
+import GraphContainer from './components/Lattice/LatticeContainer'
 import {Provider} from 'react-redux'
 import store from './redux/store'
-import NodeInfoContainer from './components/NodeInfo/NodeInfoContainer'
-import Source from './components/Source/Source'
+import ActionPanel from './components/ActionPanel/ActionPanel'
+import ErrorMessagesContainer from './components/ErrorMessages/ErrorMessagesContainer'
 
-function App() {
+const App = () => {
     return (
         <Provider store={store}>
             <div className="App">
-                <Source />
-                <GraphContainer />
-                <NodeInfoContainer />
+                <GraphContainer/>
+                <ErrorMessagesContainer/>
+                <ActionPanel/>
             </div>
         </Provider>
     )

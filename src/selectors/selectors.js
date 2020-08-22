@@ -10,24 +10,33 @@ export const getGraphKey = (state) => {
     return state.graph.graphKey
 }
 
+export const getIsSaving = (state) => {
+    return state.graph.isSaving
+}
+
+export const getSelectedNode = (state) => state.graph.selectedNodeId
+
 export const getSelectedNodeData = (state) => {
     if (state.graph.selectedNodeId) {
         const nodeId = state.graph.selectedNodeId
-        const nodeIdsFrom = state.graph.graph.edges.filter(edge => edge.to === nodeId).map(edge => edge.from)
-        const nodeIdsTo = state.graph.graph.edges.filter(edge => edge.from === nodeId).map(edge => edge.to)
-
         const nodeLabel = state.graph.graph.nodes.find(node => node.id === nodeId).label
-        const nodesFrom = state.graph.graph.nodes.filter(node => nodeIdsFrom.includes(node.id)).map(node => node.label)
-        const nodesTo = state.graph.graph.nodes.filter(node => nodeIdsTo.includes(node.id)).map(node => node.label)
+        const attributes = state.graph.attributes.find(node => node.id === nodeId).attributes
 
         return {
             label: nodeLabel,
-            from: nodesFrom,
-            to: nodesTo,
-            id: nodeId,
-            hierarchy: state.graph.graph.nodes.find(node => node.id === nodeId).level
+            attributes
         }
     }
 }
 
+export const getDataIsLoaded = (state) => {
+    return state.fileLoader.fileIsLoaded || state.fileLoader.textIsLoaded
+}
+
+export const getErrors = (state) => {
+    return state.fileLoader.errors
+}
+
 export const getText = (state) => state.fileLoader.text
+
+export const getTextFieldIsNotEmpty = (state) => state.fileLoader.textFieldIsNotEmpty

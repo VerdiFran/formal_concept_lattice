@@ -5,8 +5,8 @@ import FileSourceContainer from './FileSource/FileSourceContainer'
 const Source = () => {
     return (
         <div>
-            <TextSourceContainer />
-            <FileSourceContainer />
+            <TextSourceContainer/>
+            <FileSourceContainer/>
         </div>
     )
 }

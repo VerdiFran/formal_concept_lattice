@@ -1,0 +1,13 @@
+@import '../../colors';
+
+.container {
+    display: block;
+    box-sizing: border-box;
+    position: absolute;
+    width: 400px;
+    max-height: calc(100vh - 20px);
+    margin: 10px;
+    background-color: $block-bcg-color;
+    border: none;
+    overflow-y: auto;
+}

@@ -1,0 +1,29 @@
+@import './colors';
+
+%block {
+    display: block;
+    min-width: 300px;
+    height: auto;
+    padding: 14px;
+    background-color: $block-bcg-color;
+    box-shadow: 3px 3px 5px $shadow-color;
+    -webkit-box-shadow: 3px 3px 5px $shadow-color;
+    -moz-box-shadow: 3px 3px 5px $shadow-color;
+    z-index: 10;
+}
+
+%button {
+    height: 24px;
+    margin: 10px;
+}
+
+%errorMessage {
+    width: 100%;
+    min-height: 30px;
+    margin-top: 6px;
+    padding: 2px;
+    text-align: center;
+    color: $error-text-color;
+    background-color: $error-bcg-color;
+    border: 1px solid $error-border-color;
+}

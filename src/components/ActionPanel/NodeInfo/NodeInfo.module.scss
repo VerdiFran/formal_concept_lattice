@@ -1,0 +1,17 @@
+
+.container {
+
+    & > div {
+        display: grid;
+        grid-template: auto / [propName] 80px [propValue] auto;
+
+        span:first-of-type {
+            grid-area: propName;
+            justify-self: left;
+        }
+
+        span:last-of-type {
+            grid-area: propValue;
+        }
+    }
+}
